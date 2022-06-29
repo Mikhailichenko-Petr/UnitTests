@@ -19,8 +19,13 @@ describe("sqare",()=>{
         sqare(2)
         expect(spyMathPow).toBeCalledTimes(1)
     })
+    test("корректное значение 2",()=>{
+        const spyMathPow = jest.spyOn(Math,'pow')
+        sqare(1)
+        expect(spyMathPow).toBeCalledTimes(0)
+    })
     afterEach(()=>{
-
+        jest.clearAllMocks()
     })
     afterAll(()=>{
 
