@@ -8,3 +8,5 @@ const delay =(callback,ms)=>{
 
 delay(()=> 20+20,1000)
     .then(res=> console.log(res))
+
+module.exports = delay
